@@ -19,7 +19,7 @@
             <li class="bold center-align " style="margin-top: 20%;">
                 <div class="collapsible-body" style="display: block;">
                     <ul>
-                        <li><a href="helpers.html">Inicio</a></li>
+                        <li><a href="{{ route('product.index') }}">Inicio</a></li>
                         <li><a href=" {{ route('product.list') }}"> listar produtos</a></li>
                         <li><a href="{{ route('products.create') }}">criar produtos</a></li>
                     </ul>

@@ -1,6 +1,5 @@
-<!-- resources/views/Products/edit.blade.php -->
+@extends('products.product-layout')
 
-{{-- @extends('layouts.app') --}}
 
     <div class="container">
         <h1>Editar Produtos</h1>
