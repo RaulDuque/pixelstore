@@ -14,7 +14,7 @@
         <div class="card">
             <div class="card-image">
                 <img src="{{ asset('images/product-placeholder.png') }}">
-                <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">visibility</i></a>
+                <a href="{{ route('products.show', $product->id) }}" class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">visibility</i></a>
             </div>
             <div class="card-content">
                 <span class="card-title">{{ $product->name }}</span>
@@ -29,9 +29,7 @@
 
     </div>
 </div>
-
-
-
 @endsection
+
 
 

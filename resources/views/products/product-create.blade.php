@@ -1,7 +1,6 @@
-<!-- resources/views/Products/create.blade.php -->
-
-{{-- @extends('layouts.app') --}}
-
+@extends('products.product-layout')
+@section('title', 'create')
+@section('contents')
 
     <div class="container">
         <h1>Cadastrar Produto</h1>
@@ -24,6 +23,8 @@
                 <input type="number" class="form-control" id="quantity" name="quantity" required>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <a href="{{ route('products.index') }}" class="btn btn-primary">Voltar para a lista</a>
+
         </form>
     </div>
 

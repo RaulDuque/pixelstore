@@ -1,0 +1,10 @@
+        <nav class="blue top-nav">
+            <div class="nav-wrapper container">
+                <a href="#" class="brand-logo center">DompixelShop</a>
+                <ul id="nav-mobile" class="left">
+                <li><a href=" {{ route('product.list') }}"> listar produtos</a></li>
+                <li><a href="">Criar</a></li>
+                </ul>
+            </div>
+        </nav>
+        <

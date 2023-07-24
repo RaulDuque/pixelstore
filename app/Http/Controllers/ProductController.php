@@ -13,11 +13,16 @@ class ProductController extends Controller
 
     public function index()
     {
-        // Buscar todos os Products no banco de dados
         $products = Product::paginate(4);
 
-        // Retornar a view "index" com os dados dos Products
         return view('products.product-index', compact('products'));
+    }
+
+    public function list()
+    {
+        $products = Product::all();
+
+        return view('products.product-list', compact('products'));
     }
 
     public function create()
@@ -39,7 +44,11 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         return view('products.product-show', compact('product'));
     }
+    public function details($slug) {
+        $products = Product::where('slug',$slug);
 
+        return view('site.detailsm', compact('product'));
+    }
     public function edit($id)
     {
         $product = Product::findOrFail($id);
