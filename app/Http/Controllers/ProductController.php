@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class ProductController extends Controller
 {
@@ -12,7 +14,7 @@ class ProductController extends Controller
     public function index()
     {
         // Buscar todos os Products no banco de dados
-        $products = Product::all();
+        $products = Product::paginate(4);
 
         // Retornar a view "index" com os dados dos Products
         return view('products.product-index', compact('products'));
