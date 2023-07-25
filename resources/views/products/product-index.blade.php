@@ -7,7 +7,11 @@
 @endphp
 
 <div class="row container">
+    <h1> Catálogo de Produtos</h1>
+    <div class="row center">
+        {{ $products->links('custom.pagination') }}
 
+    </div>
     @foreach ($products as $product)
 
     <div class="col s12 m3">
@@ -24,10 +28,7 @@
     </div>
 
     @endforeach
-    <div class="row center">
-        {{ $products->links('custom.pagination') }}
 
-    </div>
 </div>
 
 
