@@ -1,66 +1,63 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Título do Projeto:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistema de Gerenciamento de Produtos
 
-## About Laravel
+Descrição do Projeto:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O Sistema de Gerenciamento de Produtos é uma aplicação web desenvolvida em Laravel que permite aos usuários cadastrar, visualizar, editar e excluir produtos de um catálogo. A aplicação possui uma interface amigável e intuitiva, facilitando o gerenciamento de produtos de forma eficiente.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Instruções para Executar o Projeto:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clonando o Repositório:
 
-## Learning Laravel
+Abra o terminal ou prompt de comando e navegue até o diretório onde deseja clonar o repositório. Execute o seguinte comando:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+git clone https://github.com/RaulDuque/pixelstore.git
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. Instalando as Dependências do Composer:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Navegue até o diretório do projeto clonado e execute o seguinte comando para instalar as dependências do projeto usando o Composer:
 
-## Laravel Sponsors
+bash
+cd nome-da-pasta
+composer install
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Configurando o Ambiente:
 
-### Premium Partners
+Faça uma cópia do arquivo .env.example e renomeie para .env. Abra o arquivo .env e configure as informações do banco de dados, como nome do banco, usuário e senha.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+makefile
+Copy code
+DB_CONNECTION=mysql
+DB_HOST=seu-host
+DB_PORT=seu-port
+DB_DATABASE=seu-banco
+DB_USERNAME=seu-usuario
+DB_PASSWORD=sua-senha
 
-## Contributing
+4. Executando as Migrações:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Após configurar o arquivo .env, execute o seguinte comando para executar as migrações e criar as tabelas no banco de dados:
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+php artisan migrate
 
-## Security Vulnerabilities
+5. Gerando a Chave de Criptografia:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Execute o seguinte comando para gerar a chave de criptografia da aplicação:
 
-## License
+php artisan key:generate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+6. Iniciando o Servidor:
+
+Para iniciar o servidor da aplicação, execute o seguinte comando:
+
+php artisan serve
+
+7. Acessando a Aplicação:
+
+Abra o navegador e acesse a URL http://localhost:8000 para acessar a aplicação. Agora você pode cadastrar, visualizar, editar e excluir produtos no sistema de gerenciamento.
+
+Observação: Certifique-se de ter o PHP instalado no seu sistema e configurado no PATH do ambiente.
+
+Lembre-se de adaptar as informações do banco de dados e as URLs de acordo com o seu ambiente e configurações específicas.
