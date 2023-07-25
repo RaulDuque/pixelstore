@@ -15,7 +15,7 @@
     </head>
 <body>
     <div class=" row container mx-auto">
-        <h1 class="text-4xl font-bold mb-4">Catalago de produtos</h1>
+        <h1 class="text-4xl font-bold mb-4">Catálogo de Produtos</h1>
         @if (count($products) > 0)
             <table class="table">
                 <thead>
